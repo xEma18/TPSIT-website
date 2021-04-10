@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+
+// variables
+// $main-color: #ade8f4;
+
+// reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// general
+body {
+  font-family: Dosis, sans-serif;
+  height: 100vh;
+  color: #fff;
+}
+
+// Utils
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 2rem;
+}
+
+.letter {
+  color: #ffd700;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+}
+
+// header
+#header {
+  height: 100vh;
+  position: relative;
+  background: rgba(0, 0, 0, 0.3);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://images.unsplash.com/photo-1594810205183-18a8b0ce6c13?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80')
+      no-repeat center center/cover;
+    // background: url('https://images.uhttps://images.unsplash.com/photo-1608817576136-0f3a56922823?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8ZXVyb3BlYW4lMjB1bmlvbnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60
+
+    z-index: -1;
+  }
+
+  #main-navbar {
+    overflow: hidden;
+    padding-top: 0.5rem;
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .logo {
+        font-size: 2rem;
+        font-weight: bold;
+        // color: $main-color;
+      }
+
+      .socials {
+        width: 7.5rem;
+        display: flex;
+        justify-content: space-between;
+
+        a {
+          transition: color 0.2s ease;
+
+          &:hover {
+            color: #4267b2;
+          }
+        }
+      }
+
+      .list {
+        list-style: none;
+        display: flex;
+
+        li {
+          padding: 1rem 1rem;
+          text-transform: uppercase;
+        }
+        a {
+          padding: 0.2rem 0;
+          border-bottom: 3px solid transparent;
+          transition: border-color 0.2s ease;
+
+          &:hover {
+            border-color: #000;
+          }
+
+          &.current {
+            border-color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
