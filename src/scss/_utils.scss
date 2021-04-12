@@ -1,0 +1,60 @@
+// colors
+// $main-color:
+// $secondary-color:
+$gold: #ffd700;
+$fb-color: #4267b2;
+$dark-color: #444;
+
+// button class
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  transition: all 0.5s ease;
+  padding: 0.9rem 2rem;
+}
+
+// backgrounds
+.bg-gold {
+  background: $gold;
+  color: #fff;
+}
+
+.bg-light {
+  background: #f1f1f1;
+  color: $dark-color;
+}
+
+// vertical padding
+.py-1 {
+  padding: 1rem 0;
+}
+.py-2 {
+  padding: 2rem 0;
+}
+.py-3 {
+  padding: 3rem 0;
+}
+
+.center {
+  text-align: center;
+}
+
+.text {
+  color: $gold;
+}
+
+.bottom-line {
+  width: 4rem;
+  height: 3px;
+  margin: 0 auto 1rem auto;
+  background: $gold;
+}
+
+.p-lead {
+  font-size: 1.3rem;
+  line-height: 1.4;
+  margin-bottom: 2rem;
+}

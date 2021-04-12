@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+@import './utils';
 
 // variables
 // $main-color: #ade8f4;
-
 // reset
 * {
   margin: 0;
@@ -25,7 +25,7 @@ body {
 }
 
 .letter {
-  color: #ffd700;
+  color: $gold;
 }
 
 a {
@@ -78,7 +78,7 @@ a {
           transition: color 0.2s ease;
 
           &:hover {
-            color: #4267b2;
+            color: $fb-color;
           }
         }
       }
@@ -102,6 +102,71 @@ a {
 
           &.current {
             border-color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  .section-content {
+    padding: 15rem 0;
+
+    h1 {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+      display: inline-block;
+    }
+
+    a {
+      background: $fb-color;
+      transition: all 0.3s ease;
+      // font-size: 1.1rem;
+      i {
+        transition: transform 0.7s ease-out;
+        padding-right: 0.2rem;
+      }
+
+      &:hover {
+        // opacity: 0.8;
+        transform: scale(0.94);
+
+        & i {
+          transform: rotate(360deg);
+        }
+      }
+    }
+  }
+}
+
+#home {
+  &-a {
+    // height: 100vh;
+    h1 {
+      text-align: center;
+      padding-bottom: 0.5rem;
+      font-size: 2rem;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+
+      & > div {
+        h2 {
+          margin: 0.5rem 0;
+          text-transform: uppercase;
+        }
+
+        p {
+          font-size: 1.1rem;
+          line-height: 1.4;
+        }
+
+        i {
+          transition: color 0.3s ease;
+          &:hover {
+            color: $gold;
           }
         }
       }
