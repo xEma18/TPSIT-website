@@ -4,6 +4,24 @@
 $gold: #ffd700;
 $fb-color: #4267b2;
 $dark-color: #444;
+$light-color: #f1f1f1;
+
+// Utils
+.container {
+  max-width: 1280px;
+  margin: auto;
+  padding: 0 2rem;
+}
+
+.letter {
+  color: $gold;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+}
 
 // button class
 .btn {
@@ -23,8 +41,10 @@ $dark-color: #444;
 }
 
 .bg-light {
-  background: #f1f1f1;
-  color: $dark-color;
+  //   background: $light-color;
+  //   color: $dark-color;
+  background: $fb-color;
+  color: #fff;
 }
 
 // vertical padding
