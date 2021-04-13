@@ -1,20 +1,32 @@
 // colors
 // $main-color:
 // $secondary-color:
-$gold: #ffd700;
 $fb-color: #4267b2;
+$twitter-color: #1da1f2;
+$instagram-color: #e95950;
+
 $dark-color: #444;
 $light-color: #f1f1f1;
+
+$main-color: #ffbc00;
+$medium-color: #ccc;
 
 // Utils
 .container {
   max-width: 1280px;
-  margin: auto;
   padding: 0 2rem;
+  margin: auto;
+  overflow: hidden;
+}
+
+.logo {
+  text-align: center;
+  padding-bottom: 0.5rem;
+  font-size: 2rem;
 }
 
 .letter {
-  color: $gold;
+  color: gold;
 }
 
 a {
@@ -42,7 +54,7 @@ img {
 
 // backgrounds
 .bg-gold {
-  background: $gold;
+  background: gold;
   color: #fff;
 }
 
@@ -51,6 +63,11 @@ img {
   //   color: $dark-color;
   background: $fb-color;
   color: #fff;
+}
+
+.bg-medium {
+  background: #efefef;
+  color: #333;
 }
 
 // vertical padding
@@ -75,19 +92,45 @@ img {
   padding: 3rem;
 }
 
+.mt-1 {
+  margin-top: 1rem;
+}
+.mt-2 {
+  margin-top: 2rem;
+}
+.mt-3 {
+  margin-top: 3rem;
+}
+
+.fx-vcenter {
+  display: flex;
+  align-items: center;
+}
+
+.fx-hcenter {
+  display: flex;
+  justify-content: center;
+}
+
+.fx-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .center {
   text-align: center;
 }
 
 .text {
-  color: $gold;
+  color: gold;
 }
 
 .bottom-line {
   width: 4rem;
   height: 3px;
   margin: 0 auto 1rem auto;
-  background: $gold;
+  background: gold;
 }
 
 .p-lead {

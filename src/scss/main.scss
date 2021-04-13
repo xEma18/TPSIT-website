@@ -16,7 +16,7 @@ body {
   font-family: Dosis, sans-serif;
   height: 100vh;
   color: #fff;
-  background: #f9f9f9;
+  background: #f8f8f8;
 }
 
 // header
@@ -62,8 +62,14 @@ body {
         a {
           transition: color 0.2s ease;
 
-          &:hover {
+          &.fb:hover {
             color: $fb-color;
+          }
+          &.tw:hover {
+            color: $twitter-color;
+          }
+          &.insta:hover {
+            color: $instagram-color;
           }
         }
       }
@@ -79,14 +85,14 @@ body {
         a {
           padding: 0.2rem 0;
           border-bottom: 3px solid transparent;
-          transition: border-color 0.2s ease;
+          transition: border-color 0.4s ease;
 
           &:hover {
-            border-color: #000;
+            border-color: #fff;
           }
 
           &.current {
-            border-color: #fff;
+            border-color: gold;
           }
         }
       }
@@ -125,13 +131,6 @@ body {
 
 #home {
   &-a {
-    // height: 100vh;
-    h1 {
-      text-align: center;
-      padding-bottom: 0.5rem;
-      font-size: 2rem;
-    }
-
     .grid-container {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -141,7 +140,7 @@ body {
         h2 {
           margin: 0.5rem 0;
           text-transform: uppercase;
-          // color: $gold;
+          // color: gold;
         }
 
         p {
@@ -152,7 +151,7 @@ body {
         i {
           transition: color 0.3s ease;
           &:hover {
-            color: $gold;
+            color: gold;
           }
         }
       }
@@ -175,7 +174,7 @@ body {
         }
 
         .pic-text {
-          border-left: 3px $gold solid;
+          border-left: 3px gold solid;
           background: $light-color;
           color: #000;
           padding: 0.5rem 1rem;
@@ -197,5 +196,148 @@ body {
   }
 
   &-c {
+    .logo {
+      color: #444;
+    }
+    .section-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3rem;
+
+      .vaccine-container {
+        .first-part {
+          display: flex;
+          justify-content: space-between;
+        }
+        .second-part {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+
+          & > div:last-child {
+            grid-column: span 2;
+          }
+        }
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        padding: 0.5rem;
+        border-radius: 15px;
+        // display: flex;
+        // justify-content: space-between;
+        // display: grid;
+        // grid-template-columns: 0.8fr 0.8fr 1fr;
+        .country-name {
+          color: #000;
+          font-size: 1.6rem;
+          text-transform: uppercase;
+        }
+
+        .country-total-vaccines {
+          grid-column: 3;
+          color: #2f5fbe;
+          font-weight: bold;
+          border: 1px solid $fb-color;
+          border-radius: 15px;
+          background: #bbcff1;
+          padding: 0.2rem 0.4rem;
+          // align-self: center;
+          font-size: 0.9rem;
+        }
+
+        .daily-vaccines {
+          color: #000;
+          text-transform: uppercase;
+          font-weight: bold;
+          padding: 0.2rem 0.4rem;
+          background: #eee;
+          border-radius: 15px;
+          // grid-column: span 2;
+        }
+
+        .today {
+          color: #000;
+          text-transform: uppercase;
+          font-weight: bold;
+        }
+      }
+
+      // .vaccine-container {
+      //   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+      //   padding: 0.5rem;
+      //   border-radius: 15px;
+      //   // display: flex;
+      //   // justify-content: space-between;
+      //   display: grid;
+      //   grid-template-columns: 0.8fr 0.8fr 1fr;
+      //   .country-name {
+      //     color: #000;
+      //     font-size: 1.6rem;
+      //     text-transform: uppercase;
+      //   }
+
+      //   .country-total-vaccines {
+      //     grid-column: 3;
+      //     color: #2f5fbe;
+      //     font-weight: bold;
+      //     border: 1px solid $fb-color;
+      //     border-radius: 15px;
+      //     background: #bbcff1;
+      //     padding: 0.2rem 0.4rem;
+      //     align-self: center;
+      //     font-size: 0.8rem;
+      //   }
+
+      //   .daily-vaccines {
+      //     color: #000;
+      //     text-transform: uppercase;
+      //     font-weight: bold;
+      //     padding: 0.2rem 0.4rem;
+      //     background: #eee;
+      //     border-radius: 15px;
+      //     grid-column: span 2;
+      //   }
+
+      //   .today {
+      //     color: #000;
+      //     text-transform: uppercase;
+      //     font-weight: bold;
+      //   }
+      // }
+    }
+  }
+}
+
+// Footer
+#main-footer {
+  margin-top: 1rem;
+  background: $dark-color;
+  color: #fff;
+  height: 5rem;
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+
+    .social {
+      display: flex;
+    }
+
+    .social .fab {
+      margin-right: 1rem;
+      display: inline-block;
+      // padding: 0.6rem;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      border: 2px solid white;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 0.3s all ease-out;
+      &:hover {
+        background: rgb(184, 164, 50);
+      }
+    }
   }
 }
