@@ -15,7 +15,7 @@ const navbar = document.querySelector('.list');
 // Words
 const words = ['Fratellanza', 'Progresso', 'Civiltà', 'Presente', 'Futuro'];
 
-// const typingEffect = new TypeWriter(words, textContainer, 200, 2000);
+const typingEffect = new TypeWriter(words, textContainer, 200, 2000);
 
 // State
 const state = {
