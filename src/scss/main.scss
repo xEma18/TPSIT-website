@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
 @import './utils';
+@import './images';
 
 // variables
 // $main-color: #ade8f4;
@@ -15,13 +16,14 @@ body {
   font-family: Dosis, sans-serif;
   height: 100vh;
   color: #fff;
+  background: #f9f9f9;
 }
 
 // header
 #header {
   height: 100vh;
   position: relative;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.4);
 
   &::before {
     content: '';
@@ -155,5 +157,45 @@ body {
         }
       }
     }
+  }
+
+  &-b {
+    .content-container {
+      .pic {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 1rem;
+
+        .p-lead {
+          margin: 0;
+        }
+
+        img {
+          height: 10rem;
+        }
+
+        .pic-text {
+          border-left: 3px $gold solid;
+          background: $light-color;
+          color: #000;
+          padding: 0.5rem 1rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+
+          h2 {
+            margin-bottom: 0.5rem;
+          }
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+
+  &-c {
   }
 }
