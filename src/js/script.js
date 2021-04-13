@@ -11,11 +11,12 @@ console.log(EU_NATIONS);
 const textContainer = document.querySelector('.text');
 const vaccineContainer = document.querySelector('.section-grid');
 const navbar = document.querySelector('.list');
+const discoverBtn = document.querySelector('.discover-btn');
 
 // Words
 const words = ['Fratellanza', 'Progresso', 'Civiltà', 'Presente', 'Futuro'];
 
-const typingEffect = new TypeWriter(words, textContainer, 200, 2000);
+new TypeWriter(words, textContainer, 200, 2000);
 
 // State
 const state = {
@@ -89,4 +90,10 @@ navbar.addEventListener('click', function (e) {
 
   const goTo = document.querySelector(`#${href.split('/').slice(-1)[0]}`);
   goTo.scrollIntoView({ behavior: 'smooth' });
+});
+
+discoverBtn.addEventListener('click', function (e) {
+  e.preventDefault();
+
+  document.querySelector('#home-a').scrollIntoView({ behavior: 'smooth' });
 });
