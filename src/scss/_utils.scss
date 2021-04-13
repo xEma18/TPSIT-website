@@ -23,6 +23,12 @@ a {
   display: inline-block;
 }
 
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
 // button class
 .btn {
   display: inline-block;
@@ -58,6 +64,17 @@ a {
   padding: 3rem 0;
 }
 
+// padding
+.p-1 {
+  padding: 1rem;
+}
+.p-2 {
+  padding: 2rem;
+}
+.p-3 {
+  padding: 3rem;
+}
+
 .center {
   text-align: center;
 }
@@ -77,4 +94,5 @@ a {
   font-size: 1.3rem;
   line-height: 1.4;
   margin-bottom: 2rem;
+  text-align: center;
 }
