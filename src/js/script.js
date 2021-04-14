@@ -12,6 +12,7 @@ const textContainer = document.querySelector('.text');
 const vaccineContainer = document.querySelector('.section-grid');
 const navbar = document.querySelector('.list');
 const discoverBtn = document.querySelector('.discover-btn');
+const latestUpdate = document.querySelector('.latest-update');
 
 // Words
 const words = ['Fratellanza', 'Progresso', 'Civiltà', 'Presente', 'Futuro'];
@@ -46,6 +47,20 @@ const generateMarkup = function (nations) {
   vaccineContainer.innerHTML = generatedMarkup;
 };
 
+const updateTime = function () {
+  const formatter = new Intl.DateTimeFormat('it-IT', {
+    month: '2-digit',
+    day: '2-digit',
+    year: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+  });
+
+  const currentDate = formatter.format(Date.now());
+  latestUpdate.textContent = `Ultimo aggiornamento: ${currentDate}`;
+};
+
 const filterNations = function (nations) {
   const arrNations = Object.entries(nations);
 
@@ -69,13 +84,14 @@ const getVaccineData = async function () {
 
     filterNations(data);
     generateMarkup(state.nations);
+    updateTime();
   } catch (error) {
     console.error(`${error.message} 🧨`);
   }
 };
 
 getVaccineData();
-setTimeout(getVaccineData, 3600);
+setInterval(getVaccineData, 300000);
 
 // DOM handlers
 navbar.addEventListener('click', function (e) {

@@ -301,6 +301,16 @@ body {
       //   }
       // }
     }
+
+    .latest-update {
+      width: 20rem;
+      padding: 0.4rem;
+      margin: 1rem auto 0 auto;
+      color: #000;
+      text-align: center;
+      border: 1px solid $medium-color;
+      border-radius: 15px;
+    }
   }
 }
 
