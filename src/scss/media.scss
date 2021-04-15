@@ -1,0 +1,137 @@
+@import './utils';
+
+@media screen and (max-width: 1024px) and (min-width: 801px) {
+  #header {
+    .section-content {
+      padding-top: 24rem;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) and (min-width: 401px) {
+  #header {
+    #main-navbar {
+      .socials {
+        display: none !important;
+      }
+    }
+  }
+
+  #home {
+    &-b {
+      .content-container {
+        .pic {
+          grid-template-columns: 1fr;
+          &:not(:last-child) {
+            padding-bottom: 1.5rem !important;
+            margin-bottom: 1.5rem !important;
+            border-bottom: 1px dotted $medium-color;
+          }
+        }
+      }
+    }
+
+    &-c {
+      .section-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #header {
+    border-bottom: 3px solid gold;
+    height: 20vh;
+    #main-navbar {
+      .nav-container {
+        flex-direction: column;
+        padding-top: 0.5rem;
+        .socials {
+          display: none;
+        }
+      }
+    }
+
+    .section-content {
+      display: none;
+    }
+
+    // .section-content {
+    //   padding-top: 7rem;
+    //   .text {
+    //     display: block;
+
+    //     &::before {
+    //       content: '"';
+    //     }
+
+    //     &::after {
+    //       content: '"';
+    //     }
+    //   }
+    // }
+  }
+
+  #home {
+    &-a {
+      .grid-container {
+        grid-template-columns: 1fr;
+
+        & > div:not(:last-child) {
+          margin-bottom: 2rem;
+        }
+      }
+    }
+
+    &-b {
+      .content-container {
+        .pic {
+          grid-template-columns: 1fr;
+
+          &:not(:last-child) {
+            padding-bottom: 1.5rem !important;
+            margin-bottom: 1.5rem !important;
+            border-bottom: 1px dotted $medium-color;
+          }
+        }
+      }
+    }
+
+    &-c {
+      .section-grid {
+        grid-template-columns: 1fr;
+
+        .vaccine-container {
+          display: none;
+
+          &:nth-child(1) {
+            display: block;
+          }
+          &:nth-child(2) {
+            display: block;
+          }
+          &:nth-child(3) {
+            display: block;
+          }
+          &:nth-child(4) {
+            display: block;
+          }
+          &:nth-child(5) {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  #main-footer {
+    .footer-content {
+      flex-direction: column;
+      justify-content: center;
+      .social {
+        display: none;
+      }
+    }
+  }
+}
