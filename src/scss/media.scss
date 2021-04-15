@@ -8,7 +8,7 @@
   }
 }
 
-@media screen and (max-width: 800px) and (min-width: 401px) {
+@media screen and (max-width: 800px) and (min-width: 612px) {
   #header {
     #main-navbar {
       .socials {
@@ -39,10 +39,10 @@
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 611px) {
   #header {
     border-bottom: 3px solid gold;
-    height: 20vh;
+    height: 25vh;
     #main-navbar {
       .nav-container {
         flex-direction: column;
